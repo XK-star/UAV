@@ -237,6 +237,33 @@
 	0,\
 }
 
+#define	IMU_POSITION_KP_DEFAULT 2//这个值和定时器的频率有关//牵扯到很多东西
+#define	IMU_POSITION_KI_DEFAULT 0//不可加积分
+#define IMU_POSITION_KD_DEFAULT 0
+
+#define IMU_HEAT_PID_DEFAULT \
+{\
+	0,\
+	0,\
+	{0,0,0},\
+	IMU_POSITION_KP_DEFAULT,\
+	IMU_POSITION_KI_DEFAULT,\
+	IMU_POSITION_KD_DEFAULT,\
+	0,\
+	0,\
+	0,\
+	400,\
+	6,\
+	10,\
+	0,\
+	2500,\
+	0,\
+	0,\
+	0,\
+	&PID_Calc,\
+	&PID_Reset,\
+}//如果改了定时器3的预装值，记得或许要改pid输出最大值//还有上面的pid系数最大值也要注意
+
 typedef struct PID_Regulator_t
 {
 	float ref;

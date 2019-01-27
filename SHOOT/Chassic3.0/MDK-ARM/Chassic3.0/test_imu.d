@@ -41,3 +41,4 @@ chassic3.0\test_imu.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.
 chassic3.0\test_imu.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h
 chassic3.0\test_imu.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
 chassic3.0\test_imu.o: ../Inc/gpio.h
+chassic3.0\test_imu.o: ..\Src\IOTask.h

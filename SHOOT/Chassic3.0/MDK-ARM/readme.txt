@@ -15,6 +15,7 @@ SPI5 板载mpu6050
 
 板载外设配置：
 TIM2-CH1-4
+TIM3-CH2   MPU加热电阻
 TIM8-CH1-4
 TIM12-CH1  蜂鸣器
 TIM5-CH1 B PWM1

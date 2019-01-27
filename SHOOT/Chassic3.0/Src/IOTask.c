@@ -228,9 +228,9 @@ CALI_STATE_e  GyroCaliProcess()
 	}
 	else
 	{					
-		GyroCaliData.GyroXOffset = gyroXSum/loopTime;   
-	  GyroCaliData.GyroYOffset = gyroYSum/loopTime;
-		GyroCaliData.GyroZOffset = gyroZSum/loopTime;	
+		GyroCaliData.GyroXOffset = (float)gyroXSum/loopTime;   
+	  GyroCaliData.GyroYOffset = (float)gyroYSum/loopTime;
+		GyroCaliData.GyroZOffset = (float)gyroZSum/loopTime;	
 		GyroCaliData.GyroCaliFlag = PARAM_CALI_DONE;
 		gyroXSum = 0;
 		gyroYSum = 0;
@@ -308,7 +308,7 @@ void CaliLoop()
 			{
 				Key_count = 0;
 				SetWorkState(STOP_STATE);		//停机 防止发疯
-				SetCaliCmdFlag(CALI_FLAG_GIMBAL);//进入云台校准
+				SetCaliCmdFlag(CALI_FLAG_GYRO);//进入云台校准
 			}
 		}
 		else

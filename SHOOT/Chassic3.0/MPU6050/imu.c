@@ -2,7 +2,10 @@
 #include "test_imu.h"
 #include "Commondefine.h"
 #include "math.h"
+#include "pid.h"
 
+
+PID_Regulator_t Heat_PID = IMU_HEAT_PID_DEFAULT;//记得赋值
 
 volatile float exInt, eyInt, ezInt;  // 误差积分
 volatile float q0 = 1.0f;
@@ -417,8 +420,24 @@ void GetPitchYawGxGyGz()
 	}
 }
 
+float heat_add = 0;
+
+void IMU_PIDTask(void)
+{
+	if(Heat_PID.output < 600)//要改的话，这三个数值都得考虑
+		{
+			heat_add = 150+PID_Task(&Heat_PID,9000,imu_data.temp)/4;//控制温度在47-47.1度左右，基本不漂
+		}	
+		else 
+			heat_add = PID_Task(&Heat_PID,9000,imu_data.temp);//
+		
+		TIM3->CCR2 = (uint16_t)heat_add;	
+					
+}
+	
 void IMU_Task(void)
 {
+	IMU_PIDTask();
 	IMU_getYawPitchRoll(angle);
 	GetPitchYawGxGyGz();
 }

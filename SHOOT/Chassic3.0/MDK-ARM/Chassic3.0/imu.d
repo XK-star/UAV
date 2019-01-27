@@ -40,3 +40,4 @@ chassic3.0\imu.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h
 chassic3.0\imu.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
 chassic3.0\imu.o: ..\MPU6050\test_imu.h
 chassic3.0\imu.o: ..\MDK-ARM\Commondefine.h
+chassic3.0\imu.o: ..\Driver\pid.h

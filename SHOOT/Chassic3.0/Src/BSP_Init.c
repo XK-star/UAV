@@ -23,8 +23,8 @@ void BSP_Init()
 	MX_TIM6_Init();
 	MX_TIM5_Init();
 
-	MX_CAN1_Init();
-	MX_CAN2_Init();
+//	MX_CAN1_Init();
+//	MX_CAN2_Init();
 
 	MX_SPI5_Init();
 }

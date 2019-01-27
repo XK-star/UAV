@@ -47,7 +47,7 @@
 #include "DM9015.h"
 #include "SuperviseTask.h"
 
-#define MiNi_PC_Test//视觉串口2收发//9015测试
+//#define MiNi_PC_Test//视觉串口2收发//9015测试
 
 //#include "tim.h"
 

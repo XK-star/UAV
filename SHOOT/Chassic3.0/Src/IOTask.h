@@ -43,9 +43,9 @@ typedef __packed struct
 
 typedef __packed struct
 {
-    int16_t     GyroXOffset;
-    int16_t     GyroYOffset;
-    int16_t     GyroZOffset;
+    float     GyroXOffset;
+    float     GyroYOffset;
+    float     GyroZOffset;
     uint8_t     GyroCaliFlag;
 }GyroCaliStruct_t;
 

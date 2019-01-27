@@ -215,7 +215,9 @@ void GMCalLoop(void)
 		PID_Task(&GMPSpeedPID, GMPPositionPID.output, -MPU6050_Real_Data.Gyro_Pitch);
 #endif		
 		
-		
+		PID_Task(&GMYPositionPID, GimbalRef.Yaw, yaw_angle);
+		PID_Task(&GMYSpeedPID, GMYPositionPID.output, MPU6050_Real_Data.Gyro_Yaw);
+
 		//PID_Task(&GMPPositionPID, GimbalRef.Pitch, -GMPitchEncoder.ecd_angle/27.0f);//‘≠∞Ê
 //		PID_Task(&GMPPositionPID, GimbalRef.Pitch, GMPitchEncoder.ecd_angle);//≥¢ ‘
 //		PID_Task(&GMPSpeedPID, GMPPositionPID.output, -MPU6050_Real_Data.Gyro_Pitch);
