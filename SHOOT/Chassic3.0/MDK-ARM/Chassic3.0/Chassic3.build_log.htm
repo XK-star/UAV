@@ -27,17 +27,16 @@ Project File Date:  01/24/2019
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 4 (build 422)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
 Build target 'Chassic3.0'
-compiling imu.c...
-..\MPU6050\imu.c(54): warning:  #177-D: variable "hz"  was declared but never referenced
-  	int16_t hx,hy,hz;
-..\MPU6050\imu.c(287): warning:  #223-D: function "Get_Time_Micros" declared implicitly
-      now = Get_Time_Micros();  //读取时间 单位是us   
-..\MPU6050\imu.c(416): warning:  #223-D: function "Get_Time_Micros" declared implicitly
-  	if(Get_Time_Micros() > 1000000)	
-..\MPU6050\imu.c: 3 warnings, 0 errors
+compiling Remote.c...
+..\Driver\Driver_Chassis.h(13): warning:  #47-D: incompatible redefinition of macro "LOW_FORWARD_BACK_SPEED"  (declared at line 26 of "..\MDK-ARM\Commondefine.h")
+  #define LOW_FORWARD_BACK_SPEED 				200
+..\Driver\Driver_Chassis.h(14): warning:  #47-D: incompatible redefinition of macro "LOW_LEFT_RIGHT_SPEED"  (declared at line 27 of "..\MDK-ARM\Commondefine.h")
+  #define LOW_LEFT_RIGHT_SPEED   				150
+..\App\Remote.c: 2 warnings, 0 errors
+compiling BSP_Init.c...
 linking...
-Program Size: Code=42072 RO-data=860 RW-data=1864 ZI-data=25680  
-"Chassic3.0\Chassic3.0" - 0 Error(s), 3 Warning(s).
+Program Size: Code=43336 RO-data=860 RW-data=1864 ZI-data=25680  
+"Chassic3.0\Chassic3.0" - 0 Error(s), 2 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -55,7 +54,7 @@ Package Vendor: ARM
 <h2>Collection of Component Files used:</h2>
 
    * Component: ARM::CMSIS:CORE:5.1.1
-Build Time Elapsed:  00:00:04
+Build Time Elapsed:  00:00:06
 </pre>
 </body>
 </html>
